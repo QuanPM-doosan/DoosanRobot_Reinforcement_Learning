@@ -1,0 +1,17 @@
+# Thư mục build ROS2
+build/
+install/
+log/
+
+# Các file tạm
+*.pyc
+__pycache__/
+*.log
+
+# Thư mục/ file hệ thống
+.DS_Store
+Thumbs.db
+
+# VSCode hoặc IDE khác (nếu có)
+.vscode/
+.idea/
