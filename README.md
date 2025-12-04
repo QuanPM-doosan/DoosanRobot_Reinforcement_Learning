@@ -19,7 +19,7 @@ sudo apt install python3-colcon-common-extensions
 
 ---
 
-## ⚙️ 2. Build workspace
+## ⚙️ 2. Build workspace (thực hiện trong ros2_ws)
 
 ```bash
 source /opt/ros/foxy/setup.bash
