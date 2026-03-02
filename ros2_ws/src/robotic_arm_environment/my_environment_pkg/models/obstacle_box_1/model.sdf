@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="obstacle_box_1">
+    <static>false</static>
+    <!-- Đặt tâm khối ở z=1.25 (vì half-height=1.25) -->
+    <pose>0 0 0.6 0 0 0</pose>
+
+    <link name="box">
+      <!-- Động học: để khối không quá “bay bổng” khi bị chạm -->
+      <inertial>
+        <mass>15.0</mass>    <!-- có thể giảm xuống 5.0 nếu muốn dễ đổ hơn -->
+        <inertia>
+          <ixx>1</ixx><iyy>1</iyy><izz>1</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+      <collision name="c">
+        <geometry><box><size>0.10 0.25 1.20</size></box></geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>3e5</kp>     <!-- đủ cứng, vẫn cho xô đổ -->
+              <kd>1e3</kd>
+              <max_vel>0.2</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.8</mu>
+              <mu2>0.8</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+
+      <visual name="v">
+        <geometry><box><size>0.10 0.25 1.20</size></box></geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

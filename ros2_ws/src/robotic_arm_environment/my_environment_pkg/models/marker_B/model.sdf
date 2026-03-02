@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="marker_B">
+    <static>true</static>
+    <link name="b">
+      <visual name="v">
+        <geometry><sphere><radius>0.01</radius></sphere></geometry>
+        <material><ambient>0 0 1 1</ambient></material>
+      </visual>
+      <collision name="c">
+        <geometry><sphere><radius>0.01</radius></sphere></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
+

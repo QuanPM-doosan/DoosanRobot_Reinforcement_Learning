@@ -1,0 +1,4 @@
+mode,phase,ep,step,reward,done,mem_len,learn_flag,ee_x,ee_y,ee_z,dist_out,signed,closest_link
+RANDOM,random,1,1,0.0,0,0,0,0.031,0.397,0.717,nan,nan,
+RANDOM,random,1,2,0.0,0,0,0,-0.068,-0.119,1.189,nan,nan,
+RANDOM,random,1,3,0.0,0,0,0,0.097,-0.191,1.256,nan,nan,
